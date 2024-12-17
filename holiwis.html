@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Lorena!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            overflow: hidden;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 4rem;
+            margin: 50px 20px 20px;
+            color: #ffecd2;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin: 20px 20px;
+            animation: floatText 4s infinite;
+        }
+
+        .balloons {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 60px;
+            height: 80px;
+            background: radial-gradient(circle, #ff6f61, #ff3d3d);
+            border-radius: 50%;
+            animation: floatUp 10s linear infinite;
+        }
+
+        .balloon:nth-child(2) {
+            background: radial-gradient(circle, #ffdc61, #ffb73d);
+            left: 20%;
+            animation-duration: 9s;
+        }
+
+        .balloon:nth-child(3) {
+            background: radial-gradient(circle, #61ff9e, #3dff6f);
+            left: 40%;
+            animation-duration: 11s;
+        }
+
+        .balloon:nth-child(4) {
+            background: radial-gradient(circle, #61aaff, #3d6fff);
+            left: 60%;
+            animation-duration: 8s;
+        }
+
+        .balloon:nth-child(5) {
+            background: radial-gradient(circle, #c361ff, #6f3dff);
+            left: 80%;
+            animation-duration: 12s;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-400px) rotate(5deg);
+            }
+            100% {
+                transform: translateY(-800px) rotate(-5deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatText {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .message {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="balloons">
+        <div class="balloon" style="left: 10%;"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <h1>¡Feliz Cumpleaños, Lorena! 🎉</h1>
+    <h2>Te deseamos un día lleno de amor, alegría y sorpresas maravillosas.</h2>
+
+    <div class="message">
+        <p>Hoy celebramos a una persona increíble: tú. Eres el alma de la fiesta y una fuente de felicidad para todos los que te rodean. Que este nuevo año esté lleno de sueños cumplidos y momentos inolvidables. ¡Disfruta mucho tu día especial!</p>
+    </div>
+
+    <footer>🎂 Con cariño, tus amigos y familia 💖</footer>
+</body>
+</html>
