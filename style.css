@@ -1,0 +1,487 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+    color:white;
+}
+
+/* ==========================
+        FONDO
+========================== */
+
+.background{
+
+    position:fixed;
+    inset:0;
+    z-index:-3;
+
+    background:
+    radial-gradient(circle at top,
+        rgba(145,90,255,.35),
+        transparent 45%),
+
+    linear-gradient(
+        rgba(15,10,35,.75),
+        rgba(5,5,15,.90)
+    ),
+
+    url("assets/fondo_ny.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    animation:fondo 18s infinite alternate;
+}
+
+@keyframes fondo{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.08);
+    }
+
+}
+
+/* ==========================
+        CAJA CENTRAL
+========================== */
+
+#main{
+
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90%;
+    max-width:650px;
+
+    padding:40px;
+
+    text-align:center;
+
+    background:rgba(35,25,65,.45);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:30px;
+
+    box-shadow:
+
+    0 0 35px rgba(0,0,0,.55),
+
+    0 0 80px rgba(150,80,255,.15);
+
+    animation:entrada 1.4s;
+}
+
+@keyframes entrada{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translate(-50%,-45%);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translate(-50%,-50%);
+    }
+
+}
+
+h1{
+
+    font-size:2.5rem;
+
+    margin-bottom:25px;
+
+    color:#f3e8ff;
+
+}
+
+p{
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+    min-height:110px;
+
+    white-space:pre-line;
+
+}
+
+/* ==========================
+        IMAGEN HISTORIA
+========================== */
+
+#imagenHistoria{
+
+    width:170px;
+
+    margin:25px auto;
+
+    display:block;
+
+    animation:flotarImagen 5s infinite ease-in-out;
+
+}
+
+@keyframes flotarImagen{
+
+    0%,100%{
+
+        transform:translateY(0);
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+    }
+
+}
+
+/* ==========================
+        BOTONES
+========================== */
+
+#buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+button{
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    transition:.30s;
+
+    background:
+    linear-gradient(
+        45deg,
+        #7c3aed,
+        #ec4899
+    );
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.25);
+
+}
+
+button:hover{
+
+    transform:
+    scale(1.08);
+
+}
+
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+#buttons button:nth-child(2){
+
+    background:
+    linear-gradient(
+        45deg,
+        #3b3b3b,
+        #707070
+    );
+
+}
+
+/* ==========================
+        GATOS
+========================== */
+
+.gato{
+
+    position:fixed;
+
+    width:90px;
+
+    opacity:.9;
+
+    animation:flotar 6s infinite ease-in-out;
+
+}
+
+.gato1{
+
+    left:4%;
+    top:15%;
+
+}
+
+.gato2{
+
+    right:5%;
+    top:65%;
+
+    animation-delay:2s;
+
+}
+
+.gato3{
+
+    right:10%;
+    top:18%;
+
+    animation-delay:1s;
+
+}
+
+@keyframes flotar{
+
+    0%,100%{
+
+        transform:translateY(0);
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+    }
+
+}
+
+/* ==========================
+        DECORACIÓN
+========================== */
+
+.decoracion{
+
+    position:fixed;
+
+    opacity:.8;
+
+    animation:flotar 7s infinite;
+
+}
+
+.luna{
+
+    top:6%;
+    right:7%;
+
+    width:130px;
+
+}
+
+.ciudad{
+
+    left:5%;
+    bottom:8%;
+
+    width:120px;
+
+}
+
+/* ==========================
+        CORAZONES
+========================== */
+
+#hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.heart{
+
+    position:absolute;
+
+    bottom:-60px;
+
+    font-size:28px;
+
+    animation:subir linear forwards;
+
+}
+
+@keyframes subir{
+
+    from{
+
+        transform:
+        translateY(0)
+        rotate(0);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translateY(-110vh)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================
+      HUELLAS DE GATO
+========================== */
+
+#huellas{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.huella{
+
+    position:absolute;
+
+    top:-50px;
+
+    animation:caer linear forwards;
+
+    font-size:22px;
+
+    opacity:.65;
+
+}
+
+@keyframes caer{
+
+    from{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+        translateY(110vh)
+        rotate(360deg);
+
+    }
+
+}
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media(max-width:700px){
+
+    #main{
+
+        width:92%;
+
+        padding:28px;
+
+    }
+
+    h1{
+
+        font-size:2rem;
+
+    }
+
+    p{
+
+        font-size:1rem;
+
+    }
+
+    #imagenHistoria{
+
+        width:140px;
+
+    }
+
+    .gato{
+
+        width:65px;
+
+    }
+
+    .luna{
+
+        width:90px;
+
+    }
+
+    .ciudad{
+
+        width:90px;
+
+    }
+
+    #buttons{
+
+        flex-direction:column;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+}
